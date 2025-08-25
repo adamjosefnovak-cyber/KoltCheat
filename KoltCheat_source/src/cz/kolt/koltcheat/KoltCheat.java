@@ -69,14 +69,14 @@ public class KoltCheat extends JavaPlugin implements Listener, TabExecutor {
         String logMsg = player.getName() + " byl vyhozen: " + reason;
         player.kickPlayer(ChatColor.RED + "[KoltCheat] " + reason);
 
-        // Zpráva OP hráčům
+
         for (Player p : Bukkit.getOnlinePlayers()) {
             if (p.isOp()) {
                 p.sendMessage(ChatColor.RED + "[KoltCheat] " + logMsg);
             }
         }
 
-        // StaffChat příkaz (pokud existuje)
+
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "staffchat [KoltCheat] " + player.getName() + " vyhozen: " + reason);
 
         logToFile(logMsg);
