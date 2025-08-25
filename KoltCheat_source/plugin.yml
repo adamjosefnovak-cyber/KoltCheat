@@ -1,0 +1,8 @@
+name: KoltCheat
+main: cz.kolt.koltcheat.KoltCheat
+version: 1.0
+api-version: 1.20
+commands:
+  koltcheat:
+    description: Základní příkaz pro KoltCheat
+    usage: /<command> [info|reload]
